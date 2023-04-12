@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
+:root {
+  --primary-color: #a86a5f;
+  --hover-color: #dfac9c88;
+  --font-family: "Poppins";
+  --white-color: #ffff;
+  --primary-btn-color: #7f3523;
+}
+
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: var(--white-color);
+  color: var(--white-color);
+}
+
+.nav-links a {
+  color: var(--primary-color);
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+  font-family: var(--font-family);
+}
+/* LOGO  img*/
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0.3rem;
+}
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: var(--hover-color);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative;
+}
+
+.dropdown {
+  background-color: var(--primary-color);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+.dropdown li a {
+  color: var(--white-color);
+}
+.dropdown li:hover {
+  background-color: var(--hover-color);
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  color: var(--primary-color);
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    height: 100vh;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: var(--hover-color);
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+  .nav-links a {
+    color: var(--white-color);
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: var(--hover-color);
+  }
+}
+
+body{
+    background: white;
+  }
+  .container {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5rem;
+  }
+  
+  .servieshero{
+    display: flex;
+    flex-direction: column;
+   
+    color: white;
+    
+    margin-bottom: rem;
+    background-size: cover!important;
+    position: relative;
+    justify-content: center;
+      align-items: center;
+  
+  }
+  .servieshero .background{
+    height: 100%;
+      width: 100%;
+      background-color: #0000008c;
+      position: absolute;
+     
+  }
+  .servieshero h2.text{
+    position: absolute;
+    z-index: 1;
+    font-size: 6vmin;
+    font-weight: bold;
+  }
+  .servieshero h4.text{
+    position: absolute;
+    z-index: 1;
+    font-size: 2vmin;
+    
+    TOP: 34vmin;
+      left: 44rem;
+  }
+  .servieshero h4.text a{
+    text-decoration: none;
+    color: white;
+  }
+  .servieshero h4.text a:hover{
+    color: var(--color1);
+  }
+  .servies .flexservies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+  }
+  
+  .servies .flexservies .text{
+    
+  font-weight: 700;
+      text-transform: capitalize;
+      font-size: 7vmin;
+      color: var(--color-dark);
+      margin-bottom: 0;
+      margin-bottom: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      
+    }
+    .servies .flexservies .card{
+      display: flex;
+      width: 79vw;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: space-around;
+     
+      row-gap: 11rem;
+    }
+    .servies .flexservies .card .items img{
+      width: 90%;
+      height: 57%;
+      position: absolute;
+      top: -23%;
+      left: 5%;
+      border-radius: 10%;
+     }
+    .servies .flexservies .card .items{
+      width: 90%;
+      height: 50vh;
+      border-radius: 2vmin;
+      background-color:#dfac9c88;
+       position: relative;
+  
+      
+      
+     
+    }
+    .servies .flexservies .card .items:hover{
+     transform: translatey(-2rem);
+     
+      
+     
+     
+    }
+    
+    .servies .flexservies .card .items .icons{
+      width: 22%;
+      height: 22%;
+      border-radius: 50%;
+      background-color: var(--color1);
+      position: absolute;
+      top: 22%;
+      left: 68%;
+  }
+    
+    .servies .flexservies .card .items .icons .imgicons{
+      width: 60%;
+      height: 60%;
+      position: absolute;
+      left: 19%;
+      top: 16%;
+  
+    }
+    .servies .flexservies .card .items .textcard{
+  
+      margin: 12rem auto;
+      font-size: 2.5vmin;
+      padding: 0 10px 0 25px;
+    }
+    @media screen  and (min-width: 768px) {
+
+      .servies .flexservies .card .items{
+        width: 30%;
+        row-gap: 9rem;
+
+    }
+  }
+  /*footer styles*/
+.footer {
+  padding: 40px 0;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+}
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: var(--white-color);
+}
+.footer .social a {
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid var(--white-color);
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+.footer .social a:hover {
+  opacity: 0.9;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.footer ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  color: var(--white-color);
+}
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer ul a:hover {
+  opacity: 1;
+}
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
